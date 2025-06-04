@@ -37,14 +37,19 @@ function render(game) {
   choicesDiv.innerHTML = "";
 
   if (game.choices[player]) {
-    info.textContent = `Você escolheu ${game.choices[player]}. Aguardando o outro jogador...`;
+    const emoji = game.choices[player] === "rock" ? "🪨" : game.choices[player] === "paper" ? "📜" : "✂️";
+    info.textContent = `Você escolheu ${emoji}. Aguardando o outro jogador...`;
   } else {
-    const moves = ["rock", "paper", "scissors"];
+    const moves = [
+      { name: "rock", emoji: "🪨" },
+      { name: "paper", emoji: "📜" },
+      { name: "scissors", emoji: "✂️" }
+    ];
     moves.forEach((move) => {
       const div = document.createElement("div");
       div.className = "choice";
-      div.textContent = move.charAt(0).toUpperCase() + move.slice(1);
-      div.onclick = () => play(move);
+      div.textContent = move.emoji;
+      div.onclick = () => play(move.name);
       choicesDiv.appendChild(div);
     });
     info.textContent = `Escolha sua jogada, ${player}!`;
@@ -52,9 +57,9 @@ function render(game) {
 
   if (game.winner) {
     if (game.winner === "Empate") {
-      info.textContent = `Empate! Reiniciando...`;
+      info.textContent = `Empate! 😐 Reiniciando...`;
     } else {
-      info.textContent = `${game.winner} ganhou! Reiniciando...`;
+      info.textContent = `${game.winner} ganhou! 🎉 Reiniciando...`;
     }
     setTimeout(() => {
       ws.send(JSON.stringify({ type: "reset" }));

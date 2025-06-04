@@ -1,7 +1,7 @@
 :root {
-  --primary: #ff0000;
-  --background: #121212;
-  --text: #fff;
+  --primary: #00ff00; /* Changed from red to green */
+  --background: #000000; /* Black background */
+  --text: #ffffff;
   --border-radius: 12px;
   --button-size: 90px;
 }
@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  background: linear-gradient(135deg, #000000, #1a1a1a); /* Kept gradient but with black tones */
   color: var(--text);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -46,21 +46,21 @@ body {
 }
 
 .card {
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* Dark gray for contrast with black background */
   padding: 30px;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Green glow */
   text-align: center;
   animation: fadeIn 0.6s ease-in-out;
 }
 
 h1, h2 {
   margin-bottom: 20px;
-  color: var(--primary);
+  color: var(--primary); /* Green headers */
 }
 
 button {
-  background-color: var(--primary);
+  background-color: var(--primary); /* Green buttons */
   color: var(--background);
   border: none;
   padding: 12px 24px;
@@ -73,7 +73,7 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px var(--primary);
+  box-shadow: 0 0 10px var(--primary); /* Green glow on hover */
 }
 
 #choices {
@@ -87,7 +87,7 @@ button:hover {
   width: var(--button-size);
   height: var(--button-size);
   font-size: 36px;
-  background-color: var(--primary);
+  background-color: var(--primary); /* Green choice buttons */
   color: var(--background);
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@ button:hover {
 }
 
 .choice:hover {
-  background-color: #ff3333;
+  background-color: #33ff33; /* Lighter green on hover */
   transform: scale(1.03);
 }
 
