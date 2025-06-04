@@ -1,0 +1,5 @@
+{
+  "players": ["Ewerton", "Hellen"],
+  "choices": { "Ewerton": null, "Hellen": null },
+  "winner": null
+}

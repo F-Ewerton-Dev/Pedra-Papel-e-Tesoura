@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <div class="container">
+    <div class="card" id="login">
+      <h1>Rock Paper Scissors</h1>
+      <h2>Escolha seu jogador</h2>
+      <button onclick="login('Ewerton')">Ewerton</button>
+      <button onclick="login('Hellen')">Hellen</button>
+    </div>
+    <div class="card" id="game" style="display: none;">
+      <h1>Rock Paper Scissors</h1>
+      <h2 id="info">Conectando ao servidor...</h2>
+      <div id="choices"></div>
+    </div>
+  </div>
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
